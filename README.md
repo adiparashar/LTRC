@@ -6,14 +6,16 @@ Indian languages are syntactically and morphologically complex, in addition to t
 My undertakings can be broadly categorized into the following:
 
 ### Dataset creation and processing:
-**Concept dictionary creation**: Hindi and Sanskrit bilingual dictionaries from various sources were scraped to build a concept dictionary repository which maps words to their semantic concepts(single or compund word meanings in a common language, say English) for both the languages. 
+
+**Concept dictionary creation**: Hindi and Sanskrit bilingual dictionaries from various sources were scraped to build a [concept dictionary repository](https://github.com/adiparashar/LTRC/tree/main/concept%20dictionaries) which maps words to their semantic concepts(single or compund word meanings in a common language, say English) for both the languages. 
 
 **USR generation**: Universal Semantic Representation (USR) captures the meaning expressed by a sentence in the discourse. It has rows corresponding to properties of the sentence and its concept words. These properties are the concepts(and TAM (tense-aspect-modality) specification on the verb), semantic category of nouns, GNP (Gender, Number, Person) information, dependency relations, anaphora,speaker’s view-points, sentence type etc. The USR acts as the interlingua.
 
 
 ### Sentence generation:
-**Neural generation**: To generate the sentence back from a given USR two kinds of approaches were considered, namely the hybrid and the direct approach depending on the proportion of deep learning models they invloved. 
+
+**Neural generation**: To generate the sentence back from a given USR two kinds of approaches were considered, namely the hybrid and the direct approach depending on the proportion of deep learning and linguistics they invloved. 
 * The hybrid approach used a linguistic rule-based approach to generate the sentences. Since the USRs did not have postposition related details, so these generated sentences were often devoid of/contained incorrect postpositions. To generate sentences with the postpositions, LLMs were finetuned on the mask prediction task for Hindi sentences, where the masks were the unknown postpositions.
 
-* For the direct approach the USRs were converted into AMR(Abstract Meaning Representation) inspired graphs which were then linearized using a DFS based approach. We finetuned different seq2seq LLMs to generate the sentences back from these USR linearizations.
+* For the direct approach the USRs were converted into AMR(Abstract Meaning Representation) inspired graphs. These USR graphs were then linearized using a DFS based approachm, to get sequences. We finetuned different seq2seq LLMs to generate the sentences back from these USR linearizations.
 
