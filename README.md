@@ -16,7 +16,7 @@ My undertakings can be broadly categorized into the following:
 
 ### Sentence generation
 
-**Neural generation**: To generate the sentence back from a given USR two kinds of approaches were followed, namely the hybrid and the direct approach depending on the proportion of deep learning and linguistics they invloved. 
+To generate the sentence back from a given USR two kinds of approaches were followed, namely the hybrid and the direct approach depending on the proportion of deep learning and linguistics they invloved. 
 * The hybrid approach used a linguistic rule-based approach to generate the sentences. Since the USRs did not have [postposition](https://hindilanguage.info/hindi-grammar/postpositions/) related details, so these generated sentences were often devoid of/contained incorrect postpositions. To generate sentences with the postpositions, LLMs were finetuned on the [mask prediction task](https://github.com/adiparashar/LTRC/tree/main/postposition%20prediction) for Hindi sentences, where the masks were the unknown postpositions.
 
 * The [direct approach](https://github.com/adiparashar/LTRC/tree/main/USR%20to%20sentence) involved converting the USRs into graphs, with hybrid rules from Abstract Meaning Representation(AMR), Universal Networking Language(UNL) frameworks. These USR graphs were then linearized using a depth first search(DFS) based approach, to get sequences. We finetuned different seq2seq LLMs like BART and mT5 to generate the sentences back from these USR linearizations. BART was chosen because of it's [denoising training objective](https://hindilanguage.info/hindi-grammar/postpositions/), which could help in getting the sentences from the linearizations. 
