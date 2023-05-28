@@ -1,0 +1,53 @@
+attr_gen(m),when the gender information is m in the GNP information row in USR,
+attr_gen(f),when the gender information is f  in the GNP information row in USR,
+attr_gen(-),when the gender information is  - in the GNP information row in USR,
+attr_num(sg),when the number  information is sg in the GNP information row in USR,
+attr_num(pl),when the number  information is  pl in the GNP information row in USR,
+attr_per(u),when the person  information is u in the GNP information row in USR,
+attr_per(m),when the person  information is m in the GNP information row in USR,
+attr_per(a),when the person  information is a in the GNP information row in USR,
+attr_anim(yes),when the anim information is given in the Semantic category of nouns row in USR,
+attr_def(yes),"when the  def information is given in the Speaker's view-points row in USR, the linerization will give def information as attributive value of the indexed word.",
+attr_ne(per),when the per information is given in the Semantic Category of nouns row in USR,
+attr_ne(loc),when the loc information is given in the Semantic Category of nouns row in USR,
+attr_ne(org),when the org information is given in the Semantic Category of nouns row in USR,
+"attr_sem-cat(mass)
+",when the mass information is given in the Semantic Category of nouns row in USR,
+"attr_sem-cat(abs)",when the abs information is given in the Semantic Category of nouns row in USR,
+attr_coref(yes),"If there is coref relation in Discourse elements row, replace the pronoun with the noun specified by the index number and make attr_coref (yes) to give coreference information.
+
+","merA sAikila suMxara hE lekina aBi vaha gaMxI hE
+"
+attr_informal(yes),"When in the Concept row, concept will be addressee but  informal will be given in the Speaker's view-point row under the index of addresse, such as-wu ",
+attr_respect(yes),"When in the Concepts row, concept will be addressee but respect  will be given in the Speaker's view-point row under the index of addresse, such as- Apa",
+disc_part(hI),when the word hI is there in the sentence but not shown in concept row and occurence is represented with index number in Speaker’s view-points row,sUrya hI camakawA hE.
+disc_part(BI),when the word BI is there in the sentence but not shown in concept row and occurence is represented with index number in Speaker’s view-points row,sUrya camakawA BI hE
+disc_part(kevala),when the word  kevala is there in the sentence but not shown in concept row and occurence is represented with index number in Speaker’s view-points row,kevala rAhula AyA WA.
+attr_comparison(superl),"when the word such as sabase is in the sentence but not used in concept row and occurence is represented as [superl] under the indexed word in the GNP Information row, it will come with the same indexed word","sUrya sabase badA nakRawra hE.
+"
+attr_comparison(less),"when the word, such as-kama is in the sentence but not used in concept row and occurence is represented as [comper-less] under the indexed word in the GNP Information row, it will come with the same indexed word","rAma mohana se kama buxXimAna hE.
+"
+,,
+attr_comparison(more),"when the word, such as jyAxA is in the sentence but not used in concept row and occurence is represented as [comper-more] under the indexed word in the GNP Information row, it will come with the same indexed word","rAma mohana se jyAxA buxXimAna hE.
+"
+":REL(unknown)","the USR will be same as affirmative sentence,  k/wh-word will be represented in the concept row of the USR and head-dependency relation will be shown in Dependency relations , sentence type will be declared as interrogative and
+ in Linearized format
+:REL(unknown)",Apa kahAz rahawe hEM?
+SENT-TYPE(interrogative,"
+the USR will be same as affirmative sentence,k/wh-concept will be represented in the Concept row of the USR, sentence type will be declared as interrogative in linerization when in USR sentence type is interrogative",Apa kahAz rahawe hEM?
+SENT-TYPE(yes-no),"the USR will be same as affirmative sentence, no concept will be given in the Concept row, sentence type will be declared as yes-no in linerization when in USR sentence type is yn_interrogative",kyA mEM jA sakawA hUz?
+SENT-TYPE(affirmative),when the sentence type information is affirmative in USR in Sentence type row,
+negative,yet to be decided,
+SENT-TYPE(negative),when the sentence type information is negative in USR in Sentence type row,
+SENT-TYPE( pass-affirmative),when the sentence type information is pass-affirmative in USR in Sentence type row,
+SENT-TYPE(pass-negative),when the sentence type information is pass-negative in USR in Sentence type row,
+SENT-TYPE(imperative),when the sentence type information is imperative in USR in Sentence type row,
+conditional,"if there is conditional connective, such as-agara,yaxI in the sentence, USRs will be broken into two simple sentences. one sentence will show the conditional relation with other in the Discourse elements row (generally the 2nd sentence between two USRs), linearization will first represent the sentence which contains conditional in Discourse elements row and will show condition under the head of the verb. this conditional head will take the USR of the other sentence.","अगर तुम आओगे तो मैं जाऊंगी।
+"
+contrast,"when there are contrast connectives in sentence or two sentences are connected with some contrastive marker, such as-para, lekina etc. in the sentence, USR will represent USRs of two simplified sentence. linerization will make the contrast as head, two USRs will be two components of the contrast head and will be represented as comp1 and comp2.",मेरी साइकिल सुंदर है लेकिन साइकिल अभी गंदी है।
+conjuction- :REL(conj),"when there is conjunction relation between/ among two or more than two concepts, USR represents it as conj[...] in the Construction row, linerization will be- :REL(conj and then will take the separate concepts as operators, such as-op1, op2....",कुछ मानचित्र एक छोटे क्षेत्र को एवं कुछ तथ्यों को दर्शाता है ।
+attr_shade(light verb_level),"If there is a compound verb construction in USR, 
+ concept row only represents the main verb and TAM information and
+ the speaker's view point row represents attr_shade(lightverb_level) information, 
+then the linearization will represent attr_shade(light verb_level), 
+such as - attr_shade(jA_1) for  बिगड़ जाता है and will be indented with the TAM.",
