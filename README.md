@@ -5,12 +5,12 @@ Indian languages are syntactically and morphologically complex, in addition to t
 
 My undertakings can be broadly categorized into the following:
 
-*Dataset creation and processing:
+* Dataset creation and processing:
 Concept dictionary creation: Hindi and Sanskrit bilingual dictionaries from various sources were scraped to build a concept dictionary repository which maps words to their semantic concepts(single or compund word meanings in a common language, say English) for both the languages. 
 
-*USR generation: Universal Semantic Representation (USR) captures the meaning expressed by a sentence in the discourse. It has rows corresponding to properties of the sentence and its concept words. These properties are the concepts(and TAM (tense-aspect-modality) specification on the verb), semantic category of nouns, GNP (Gender, Number, Person) information, dependency relations, anaphora,speaker’s view-points, sentence type etc.
+* USR generation: Universal Semantic Representation (USR) captures the meaning expressed by a sentence in the discourse. It has rows corresponding to properties of the sentence and its concept words. These properties are the concepts(and TAM (tense-aspect-modality) specification on the verb), semantic category of nouns, GNP (Gender, Number, Person) information, dependency relations, anaphora,speaker’s view-points, sentence type etc.
 
 
-*Sentence generation:
+* Sentence generation:
 Neural generation: To generate the sentence back from a given USR they were converted to a AMR like graphs which was then linearized using a DFS based approach. We finetuned different seq2seq LLMs to generate the sentences back from these linearizations.
 
